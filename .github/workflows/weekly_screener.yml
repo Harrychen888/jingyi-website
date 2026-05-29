@@ -1,0 +1,40 @@
+name: Weekly AI Growth Stock Screener
+
+on:
+  schedule:
+    # Friday 6:00 PM New York is usually 22:00 UTC during daylight saving time
+    # and 23:00 UTC during standard time. Adjust if exact market-close timing matters.
+    - cron: "0 23 * * 5"
+  workflow_dispatch:
+
+jobs:
+  run-screener:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: weekly_ai_growth_screener
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run screener
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          EMAIL_TO: ${{ secrets.EMAIL_TO }}
+          SMTP_SERVER: smtp.gmail.com
+          SMTP_PORT: "587"
+          MIN_MARKET_CAP: "2000000000"
+          MIN_REVENUE_GROWTH: "0.10"
+          MIN_PRICE_MOMENTUM_6M: "0"
+          MIN_FINAL_SCORE: "70"
+        run: python main.py
