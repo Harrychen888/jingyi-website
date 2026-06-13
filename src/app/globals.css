@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #06111f;
+  --foreground: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container-page {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(90deg, rgba(6, 17, 31, 0.96), rgba(6, 17, 31, 0.72)),
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    url("/assets/products/yz-090b.jpg");
+  background-position: center;
+  background-size: auto, 72px 72px, 72px 72px, cover;
+}
+
+.subtle-grid {
+  background-image:
+    linear-gradient(rgba(248, 250, 252, 0.94), rgba(248, 250, 252, 0.94)),
+    linear-gradient(90deg, rgba(16, 43, 74, 0.08) 1px, transparent 1px),
+    linear-gradient(rgba(16, 43, 74, 0.08) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+}
+
+.dark-grid {
+  background-image:
+    linear-gradient(rgba(6, 17, 31, 0.94), rgba(6, 17, 31, 0.96)),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: auto, 56px 56px, 56px 56px;
+}
+
+.orange-rule::before {
+  display: inline-block;
+  width: 42px;
+  height: 1px;
+  margin-right: 12px;
+  vertical-align: middle;
+  background: #f28c28;
+  content: "";
+}
+
+.section-pad {
+  padding: 76px 0;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 52px 0;
+  }
+}

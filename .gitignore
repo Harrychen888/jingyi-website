@@ -9,3 +9,11 @@ weekly_ai_growth_screener/.env
 
 weekly_ai_growth_screener/output/*
 !weekly_ai_growth_screener/output/.gitkeep
+weekly_ai_growth_screener/
+.github/workflows/weekly_screener.yml
+
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
