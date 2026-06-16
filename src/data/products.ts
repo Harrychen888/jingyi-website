@@ -108,6 +108,7 @@ export const products: Product[] = [
     ],
     image: "/assets/products/yz-092c.jpg",
     detailImages: ["/assets/applications/j599-connectors.jpg"],
+    video: "/assets/videos/yz-092c-operation-web.mp4",
   },
   {
     slug: "yz-090a",

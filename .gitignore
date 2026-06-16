@@ -20,3 +20,4 @@ dist/
 
 public/assets/videos/*.mp4
 !public/assets/videos/yz-090b-operation-web.mp4
+!public/assets/videos/yz-092c-operation-web.mp4
