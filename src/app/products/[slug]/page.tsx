@@ -62,6 +62,36 @@ export default async function ProductDetailPage({ params }: ProductDetailPagePro
         </div>
       </section>
 
+      {product.video ? (
+        <section className="section-pad bg-white">
+          <div className="container-page">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+              <div>
+                <p className="orange-rule text-sm font-bold uppercase tracking-[0.28em] text-signal">Operation Video</p>
+                <h2 className="mt-3 text-3xl font-bold text-navy-950">
+                  {lang === "en" ? "Machining Operation Video" : "加工操作视频"}
+                </h2>
+                <p className="mt-4 text-base leading-8 text-slate-600">
+                  {lang === "en"
+                    ? "Watch the YZ-090B CNC vertical slotting-milling center in an actual machining operation scenario."
+                    : "查看 YZ-090B 数控立式插铣中心在实际加工操作场景中的运行状态。"}
+                </p>
+              </div>
+              <div className="overflow-hidden border border-slate-200 bg-navy-950 shadow-sm">
+                <video
+                  src={product.video}
+                  className="aspect-video w-full bg-black"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  poster={product.image}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : null}
+
       <section className="section-pad bg-white">
         <div className="container-page grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div>

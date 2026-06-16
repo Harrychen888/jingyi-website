@@ -15,6 +15,7 @@ export type Product = {
   }[];
   image: string;
   detailImages?: string[];
+  video?: string;
 };
 
 const sharedFeatures = [
@@ -188,6 +189,7 @@ export const products: Product[] = [
     ],
     image: "/assets/products/yz-090b-catalog.jpg",
     detailImages: ["/assets/products/yz-090b-workshop.jpg", "/assets/applications/connector-sample.jpg"],
+    video: "/assets/videos/yz-090b-operation-web.mp4",
   },
 ];
 

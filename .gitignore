@@ -17,3 +17,6 @@ node_modules/
 out/
 dist/
 *.tsbuildinfo
+
+public/assets/videos/*.mp4
+!public/assets/videos/yz-090b-operation-web.mp4
