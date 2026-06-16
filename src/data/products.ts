@@ -71,7 +71,7 @@ export const products: Product[] = [
       { label: "冷却油箱容积", value: "100L" },
       { label: "净重", value: "2500kg" },
     ],
-    image: "/assets/products/yz-090b-workshop.jpg",
+    image: "/assets/products/yz-084c.jpg",
     detailImages: ["/assets/applications/connector-sample.jpg"],
   },
   {
@@ -105,7 +105,7 @@ export const products: Product[] = [
       { label: "冷却油箱容积", value: "100L" },
       { label: "净重", value: "2300kg" },
     ],
-    image: "/assets/products/yz-090b-workshop.jpg",
+    image: "/assets/products/yz-092c.jpg",
     detailImages: ["/assets/applications/j599-connectors.jpg"],
   },
   {
@@ -146,7 +146,7 @@ export const products: Product[] = [
       { label: "冷却油箱容积", value: "210L" },
       { label: "净重", value: "4000kg" },
     ],
-    image: "/assets/products/yz-090b.jpg",
+    image: "/assets/products/yz-090a.jpg",
     detailImages: ["/assets/products/yz-090b-workshop.jpg", "/assets/applications/connector-sample.jpg"],
   },
   {
@@ -186,7 +186,7 @@ export const products: Product[] = [
       { label: "冷却油箱容积", value: "210L" },
       { label: "净重", value: "3800kg" },
     ],
-    image: "/assets/products/yz-090b.jpg",
+    image: "/assets/products/yz-090b-catalog.jpg",
     detailImages: ["/assets/products/yz-090b-workshop.jpg", "/assets/applications/connector-sample.jpg"],
   },
 ];
